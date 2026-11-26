@@ -1,0 +1,16 @@
+{
+  "name": "sarsa",
+  "mode": "fixed",
+  "episodes": 5000,
+  "sample_efficiency": {
+    "episodes_to_notlose95": null,
+    "wall_time_to_notlose95_s": null
+  },
+  "final": {
+    "win_vs_random": 0.81,
+    "win_vs_heuristic": 0.0,
+    "win_vs_minimax": 0.0,
+    "notlose_vs_minimax": 0.6,
+    "wall_time": 2.632894992828369
+  }
+}

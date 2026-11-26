@@ -1,0 +1,16 @@
+{
+  "name": "mcts",
+  "mode": "fixed",
+  "episodes": 10000,
+  "sample_efficiency": {
+    "episodes_to_notlose95": 0,
+    "wall_time_to_notlose95_s": 79.3
+  },
+  "final": {
+    "win_vs_random": 0.92,
+    "win_vs_heuristic": 0.0,
+    "win_vs_minimax": 0.0,
+    "notlose_vs_minimax": 1.0,
+    "wall_time": 79.31879186630249
+  }
+}

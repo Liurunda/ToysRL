@@ -1,0 +1,2 @@
+draw_vs_heuristic,draw_vs_minimax,draw_vs_random,episode,notlose_vs_minimax,wall_time,win_vs_heuristic,win_vs_minimax,win_vs_random
+1.0,1.0,0.08,0,1.0,79.31879186630249,0.0,0.0,0.92

@@ -1,0 +1,16 @@
+{
+  "name": "dqn",
+  "mode": "selfplay",
+  "episodes": 2000,
+  "sample_efficiency": {
+    "episodes_to_notlose95": null,
+    "wall_time_to_notlose95_s": null
+  },
+  "final": {
+    "win_vs_random": 0.66,
+    "win_vs_heuristic": 0.0,
+    "win_vs_minimax": 0.0,
+    "notlose_vs_minimax": 0.06,
+    "wall_time": 32.98552441596985
+  }
+}

@@ -1,0 +1,70 @@
+# 多范式强化学习演示平台 - 默认超参数配置
+
+seed: 42
+
+# ------------------------- 表格型算法 -------------------------
+tabular:
+  lr: 0.2
+  gamma: 0.9
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay: 0.999      # 每回合乘法衰减
+
+# ------------------------- DQN -------------------------
+dqn:
+  lr: 0.001
+  gamma: 0.95
+  buffer_size: 10000
+  batch_size: 64
+  target_update_every: 100
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay: 0.999
+
+# ------------------------- PPO -------------------------
+ppo:
+  lr: 0.0003
+  gamma: 0.99
+  lam: 0.95                 # GAE λ
+  clip_epsilon: 0.2
+  entropy_coef: 0.01
+  value_coef: 0.5
+  epochs: 8
+  min_batch: 64
+  mini_batch: 32
+
+# ------------------------- 纯搜索 MCTS -------------------------
+mcts:
+  n_simulations: 2000
+  c_uct: 1.414
+
+# ------------------------- AlphaZero-Lite -------------------------
+alphazero:
+  n_simulations: 200
+  c_puct: 1.4
+  lr: 0.001
+  weight_decay: 0.0001
+  epochs: 3
+  batch_size: 256
+  use_symmetry: true        # 棋盘旋转/镜像对称性数据增强
+
+# ------------------------- 训练调度 -------------------------
+training:
+  episodes: 10000
+  eval_every: 500
+  # 自博弈 (历史对手池)
+  save_every: 500           # 每 K 局保存一个版本进历史池
+  pool_size: 10             # 最多保留最近 10 个版本
+  pool_prob: 0.2            # 20% 概率匹配历史池老对手, 80% 匹配最新自己
+  az_games_per_update: 10   # AlphaZero 每自博弈多少局训练一次网络
+
+# ------------------------- 标准化评估协议 -------------------------
+eval:
+  games_vs_random: 100      # 50 先手 + 50 后手
+  games_vs_heuristic: 100
+  games_vs_minimax: 50      # 25 先手 + 25 后手
+
+# ------------------------- Elo 天梯赛 -------------------------
+arena:
+  K: 32
+  games_per_pair: 40

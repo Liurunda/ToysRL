@@ -1,0 +1,16 @@
+{
+  "name": "alphazero",
+  "mode": "selfplay",
+  "episodes": 3000,
+  "sample_efficiency": {
+    "episodes_to_notlose95": 2000,
+    "wall_time_to_notlose95_s": 392.1
+  },
+  "final": {
+    "win_vs_random": 0.91,
+    "win_vs_heuristic": 0.0,
+    "win_vs_minimax": 0.0,
+    "notlose_vs_minimax": 1.0,
+    "wall_time": 590.2766180038452
+  }
+}

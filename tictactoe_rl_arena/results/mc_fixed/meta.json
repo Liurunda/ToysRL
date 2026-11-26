@@ -1,0 +1,47 @@
+{
+  "name": "mc",
+  "mode": "fixed",
+  "cfg": {
+    "tabular": {
+      "lr": 0.2,
+      "gamma": 0.9,
+      "epsilon_start": 1.0,
+      "epsilon_end": 0.05,
+      "epsilon_decay": 0.999
+    },
+    "dqn": {
+      "lr": 0.001,
+      "gamma": 0.95,
+      "buffer_size": 10000,
+      "batch_size": 64,
+      "target_update_every": 100,
+      "epsilon_start": 1.0,
+      "epsilon_end": 0.05,
+      "epsilon_decay": 0.999
+    },
+    "ppo": {
+      "lr": 0.0003,
+      "gamma": 0.99,
+      "lam": 0.95,
+      "clip_epsilon": 0.2,
+      "entropy_coef": 0.01,
+      "value_coef": 0.5,
+      "epochs": 8,
+      "min_batch": 64,
+      "mini_batch": 32
+    },
+    "mcts": {
+      "n_simulations": 2000,
+      "c_uct": 1.414
+    },
+    "alphazero": {
+      "n_simulations": 200,
+      "c_puct": 1.4,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "epochs": 3,
+      "batch_size": 256,
+      "use_symmetry": true
+    }
+  }
+}

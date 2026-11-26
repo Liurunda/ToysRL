@@ -1,0 +1,16 @@
+{
+  "name": "ppo",
+  "mode": "fixed",
+  "episodes": 10000,
+  "sample_efficiency": {
+    "episodes_to_notlose95": null,
+    "wall_time_to_notlose95_s": null
+  },
+  "final": {
+    "win_vs_random": 0.8,
+    "win_vs_heuristic": 0.0,
+    "win_vs_minimax": 0.0,
+    "notlose_vs_minimax": 0.16,
+    "wall_time": 51.4362850189209
+  }
+}
